@@ -14,7 +14,7 @@ public class EmployeeService {
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    public Optional<Employee> getEmployee(final Long id) {
+    public Optional<Employee> getEmployee(final int id) {
         return employeeRepository.findById(id);
     }
 
@@ -22,7 +22,7 @@ public class EmployeeService {
         return employeeRepository.findAll();
     }
 
-    public void deleteEmployee(final Long id) {
+    public void deleteEmployee(final int id) {
         employeeRepository.deleteById(id);
     }
 
@@ -30,4 +30,8 @@ public class EmployeeService {
         Employee savedEmployee = employeeRepository.save(employee);
         return savedEmployee;
     }
+
+
+
+
 }
